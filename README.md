@@ -30,6 +30,8 @@ This project is a RESTful API built with **Node.js**, **Express**, **MongoDB**, 
 ```
 
 credence\_analytics/
+├── config/
+│   └── db.js                  # MongoDB connection configuration
 ├── controllers/
 │   └── movieController.js
 ├── middleware/
@@ -63,7 +65,11 @@ cd CredenceAnalytics-PRANAV-API
 npm install
 ```
 
-### 3. Run the development server
+### 3. Configure MongoDB connection
+
+Make sure your MongoDB server is running, or update the connection string in the `config/db.js` file to match your MongoDB setup.
+
+### 4. Run the development server
 
 ```bash
 npm run dev
@@ -83,13 +89,12 @@ The server will start on `http://localhost:3000`
 | PUT    | `/api/movies/update/:id` | Update movie by ID (with image) |
 | DELETE | `/api/movies/delete/:id` | Delete movie by ID              |
 
-
 ---
 
 ## ⚠️ Important Notes
 
 * Duplicate movie names are not allowed (validation is handled in the backend).
-* MongoDB connection string and port are hardcoded in `server.js` (no `.env` used).
+* MongoDB connection is handled via `config/db.js`.
 * Make sure your MongoDB server is running locally or update the connection string as needed.
 
 ---
