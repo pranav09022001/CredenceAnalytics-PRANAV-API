@@ -1,3 +1,4 @@
+
 # Credence Analytics - Movie CRUD API
 
 This project is a RESTful API built with **Node.js**, **Express**, **MongoDB**, and **Multer** to perform CRUD operations on a list of movies. Each movie includes a name, summary, and image upload.
@@ -26,21 +27,24 @@ This project is a RESTful API built with **Node.js**, **Express**, **MongoDB**, 
 
 ## 📁 Folder Structure
 
+```
 
-credence_analytics/
+credence\_analytics/
 ├── controllers/
-│ └── movieController.js
+│   └── movieController.js
 ├── middleware/
-│ └── Upload.js
+│   └── Upload.js
 ├── models/
-│ └── Movie.js
+│   └── Movie.js
 ├── routes/
-│ └── movieRoutes.js
+│   └── movieRoutes.js
 ├── uploads/
-│ └── (uploaded image files)
+│   └── (uploaded image files)
 ├── server.js
 ├── package.json
 └── README.md
+
+````
 
 ---
 
@@ -51,26 +55,42 @@ credence_analytics/
 ```bash
 git clone https://github.com/pranav09022001/CredenceAnalytics-PRANAV-API.git
 cd CredenceAnalytics-PRANAV-API
-2. Install dependencies
+````
 
+### 2. Install dependencies
+
+```bash
 npm install
-3. Run the development server
+```
 
+### 3. Run the development server
+
+```bash
 npm run dev
-The server will start on http://localhost:3000
+```
 
-📂 API Endpoints
-Method	Endpoint	Description
-POST	/api/movies/create	Create a new movie (with image)
-GET	/api/movies/	Get all movies
-GET	/api/movies/:id	Get a specific movie by ID
-PUT	/api/movies/update/:id	Update movie by ID (with image)
-DELETE	/api/movies/delete/:id	Delete movie by ID
+The server will start on `http://localhost:3000`
 
-⚠️ Important Notes
-Duplicate movie names are not allowed (validation is handled in the backend).
+---
 
-MongoDB connection string and port are hardcoded in server.js (no .env used).
+## 📂 API Endpoints (based on your routes)
 
-Make sure your MongoDB server is running locally or update the connection string as needed.
+| Method | Endpoint                 | Description                     |
+| ------ | ------------------------ | ------------------------------- |
+| POST   | `/api/movies/create`     | Create a new movie (with image) |
+| GET    | `/api/movies/`           | Get all movies                  |
+| GET    | `/api/movies/:id`        | Get a specific movie by ID      |
+| PUT    | `/api/movies/update/:id` | Update movie by ID (with image) |
+| DELETE | `/api/movies/delete/:id` | Delete movie by ID              |
+
+
+---
+
+## ⚠️ Important Notes
+
+* Duplicate movie names are not allowed (validation is handled in the backend).
+* MongoDB connection string and port are hardcoded in `server.js` (no `.env` used).
+* Make sure your MongoDB server is running locally or update the connection string as needed.
+
+---
 
