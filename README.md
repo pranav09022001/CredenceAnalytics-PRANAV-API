@@ -42,10 +42,6 @@ credence_analytics/
 ├── package.json
 └── README.md
 
-yaml
-Copy
-Edit
-
 ---
 
 ## 📦 Installation & Usage
@@ -56,18 +52,14 @@ Edit
 git clone https://github.com/pranav09022001/CredenceAnalytics-PRANAV-API.git
 cd CredenceAnalytics-PRANAV-API
 2. Install dependencies
-bash
-Copy
-Edit
+
 npm install
 3. Run the development server
-bash
-Copy
-Edit
-npm run dev
-The server will start on http://localhost:5000
 
-📂 API Endpoints (based on your routes)
+npm run dev
+The server will start on http://localhost:3000
+
+📂 API Endpoints
 Method	Endpoint	Description
 POST	/api/movies/create	Create a new movie (with image)
 GET	/api/movies/	Get all movies
@@ -75,27 +67,10 @@ GET	/api/movies/:id	Get a specific movie by ID
 PUT	/api/movies/update/:id	Update movie by ID (with image)
 DELETE	/api/movies/delete/:id	Delete movie by ID
 
-For POST and PUT, use multipart/form-data and provide the image with key name img.
-
-🖼 Image Uploads
-Image files are uploaded using Multer and stored in the /uploads/ directory.
-
-Serve image files statically via: http://localhost:5000/uploads/<filename>
-
 ⚠️ Important Notes
 Duplicate movie names are not allowed (validation is handled in the backend).
 
 MongoDB connection string and port are hardcoded in server.js (no .env used).
 
 Make sure your MongoDB server is running locally or update the connection string as needed.
-
-✅ Example Movie Object
-json
-Copy
-Edit
-{
-  "name": "Avengers: Endgame",
-  "summary": "The Avengers assemble for one final battle...",
-  "img": "uploads/avengers.jpg"
-}
 
